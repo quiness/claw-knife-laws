@@ -385,13 +385,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 .klh-state-card__name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 1.05rem;
     font-weight: 600;
     margin: 0;
     letter-spacing: -0.02em;
+}
+.klh-state-card__emoji {
+    font-size: 1.15rem;
+    line-height: 1;
 }
 .klh-state-card__abbr {
     font-size: 0.8rem;
@@ -400,6 +407,29 @@ body {
     background: var(--bg);
     padding: 2px 8px;
     border-radius: var(--radius-pill);
+}
+.klh-state-card__rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+}
+.klh-state-card__rating--permissive {
+    background: var(--green-bg);
+    color: var(--green);
+}
+.klh-state-card__rating--moderate {
+    background: var(--amber-bg);
+    color: var(--amber);
+}
+.klh-state-card__rating--restrictive {
+    background: var(--red-bg);
+    color: var(--red);
 }
 .klh-state-card__badges {
     display: flex;
@@ -559,11 +589,12 @@ body {
     <div class="klh-hub__grid" id="klh-state-grid">
 
         <!-- Alabama -->
-        <a href="#" class="klh-state-card" data-state="alabama" data-abbr="al" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="alabama" data-abbr="al" data-rating="permissive" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Alabama</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🏛️</span> Alabama</h2>
                 <span class="klh-state-card__abbr">AL</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--permissive">✅ Permissive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> Yes</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -574,11 +605,12 @@ body {
         </a>
 
         <!-- Alaska -->
-        <a href="#" class="klh-state-card" data-state="alaska" data-abbr="ak" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="alaska" data-abbr="ak" data-rating="permissive" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Alaska</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🏔️</span> Alaska</h2>
                 <span class="klh-state-card__abbr">AK</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--permissive">✅ Permissive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> Yes</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -589,11 +621,12 @@ body {
         </a>
 
         <!-- Arizona -->
-        <a href="#" class="klh-state-card" data-state="arizona" data-abbr="az" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="arizona" data-abbr="az" data-rating="permissive" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Arizona</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🌵</span> Arizona</h2>
                 <span class="klh-state-card__abbr">AZ</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--permissive">✅ Permissive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> Yes</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -604,11 +637,12 @@ body {
         </a>
 
         <!-- California -->
-        <a href="california.html" class="klh-state-card" data-state="california" data-abbr="ca" data-preemption="false" data-open-carry="true" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="no">
+        <a href="california.html" class="klh-state-card" data-state="california" data-abbr="ca" data-rating="restrictive" data-preemption="false" data-open-carry="true" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">California</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🌴</span> California</h2>
                 <span class="klh-state-card__abbr">CA</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--restrictive">🚫 Restrictive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> No</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> No</span>
@@ -619,11 +653,12 @@ body {
         </a>
 
         <!-- Colorado -->
-        <a href="#" class="klh-state-card" data-state="colorado" data-abbr="co" data-preemption="false" data-open-carry="true" data-concealed-carry="true" data-switchblade="false" data-automatic="false" data-blade-limit="yes">
+        <a href="#" class="klh-state-card" data-state="colorado" data-abbr="co" data-rating="moderate" data-preemption="false" data-open-carry="true" data-concealed-carry="true" data-switchblade="false" data-automatic="false" data-blade-limit="yes">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Colorado</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">⛰️</span> Colorado</h2>
                 <span class="klh-state-card__abbr">CO</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--moderate">⚠️ Moderate</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> No</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> No</span>
@@ -634,11 +669,12 @@ body {
         </a>
 
         <!-- Connecticut -->
-        <a href="#" class="klh-state-card" data-state="connecticut" data-abbr="ct" data-preemption="false" data-open-carry="null" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="yes">
+        <a href="#" class="klh-state-card" data-state="connecticut" data-abbr="ct" data-rating="restrictive" data-preemption="false" data-open-carry="null" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="yes">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Connecticut</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🍂</span> Connecticut</h2>
                 <span class="klh-state-card__abbr">CT</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--restrictive">🚫 Restrictive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> No</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> No</span>
@@ -649,11 +685,12 @@ body {
         </a>
 
         <!-- Florida -->
-        <a href="#" class="klh-state-card" data-state="florida" data-abbr="fl" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="florida" data-abbr="fl" data-rating="permissive" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Florida</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🐊</span> Florida</h2>
                 <span class="klh-state-card__abbr">FL</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--permissive">✅ Permissive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> Yes</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -664,11 +701,12 @@ body {
         </a>
 
         <!-- Illinois -->
-        <a href="#" class="klh-state-card" data-state="illinois" data-abbr="il" data-preemption="false" data-open-carry="true" data-concealed-carry="null" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="illinois" data-abbr="il" data-rating="moderate" data-preemption="false" data-open-carry="true" data-concealed-carry="null" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Illinois</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🏙️</span> Illinois</h2>
                 <span class="klh-state-card__abbr">IL</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--moderate">⚠️ Moderate</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> No</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -679,11 +717,12 @@ body {
         </a>
 
         <!-- New York -->
-        <a href="#" class="klh-state-card" data-state="new york" data-abbr="ny" data-preemption="false" data-open-carry="null" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="new york" data-abbr="ny" data-rating="restrictive" data-preemption="false" data-open-carry="null" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">New York</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🗽</span> New York</h2>
                 <span class="klh-state-card__abbr">NY</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--restrictive">🚫 Restrictive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> No</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> No</span>
@@ -694,11 +733,12 @@ body {
         </a>
 
         <!-- Ohio -->
-        <a href="#" class="klh-state-card" data-state="ohio" data-abbr="oh" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="ohio" data-abbr="oh" data-rating="permissive" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Ohio</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🌰</span> Ohio</h2>
                 <span class="klh-state-card__abbr">OH</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--permissive">✅ Permissive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> Yes</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -709,11 +749,12 @@ body {
         </a>
 
         <!-- Texas -->
-        <a href="#" class="klh-state-card" data-state="texas" data-abbr="tx" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="texas" data-abbr="tx" data-rating="permissive" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Texas</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🤠</span> Texas</h2>
                 <span class="klh-state-card__abbr">TX</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--permissive">✅ Permissive</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> Yes</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> Yes</span>
@@ -724,11 +765,12 @@ body {
         </a>
 
         <!-- Washington -->
-        <a href="#" class="klh-state-card" data-state="washington" data-abbr="wa" data-preemption="false" data-open-carry="true" data-concealed-carry="true" data-switchblade="false" data-automatic="false" data-blade-limit="no">
+        <a href="#" class="klh-state-card" data-state="washington" data-abbr="wa" data-rating="moderate" data-preemption="false" data-open-carry="true" data-concealed-carry="true" data-switchblade="false" data-automatic="false" data-blade-limit="no">
             <div class="klh-state-card__header">
-                <h2 class="klh-state-card__name">Washington</h2>
+                <h2 class="klh-state-card__name"><span class="klh-state-card__emoji">🌲</span> Washington</h2>
                 <span class="klh-state-card__abbr">WA</span>
             </div>
+            <div class="klh-state-card__rating klh-state-card__rating--moderate">⚠️ Moderate</div>
             <div class="klh-state-card__badges">
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Preemption</span> No</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span><span class="klh-badge__label">Switch</span> No</span>
@@ -750,6 +792,7 @@ body {
                 <thead>
                     <tr style="border-bottom:1px solid var(--border);">
                         <th style="padding:12px 16px;text-align:left;font-weight:600;color:var(--text);white-space:nowrap;">State</th>
+                        <th style="padding:12px 16px;text-align:center;font-weight:600;color:var(--text);">Rating</th>
                         <th style="padding:12px 16px;text-align:center;font-weight:600;color:var(--text);">Preemption</th>
                         <th style="padding:12px 16px;text-align:center;font-weight:600;color:var(--text);">Open Carry</th>
                         <th style="padding:12px 16px;text-align:center;font-weight:600;color:var(--text);">Concealed Carry</th>
@@ -759,18 +802,18 @@ body {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Alabama</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Alaska</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Arizona</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">California</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Restricted</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Colorado</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">3.5"</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Connecticut</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">4"</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Florida</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Illinois</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Restricted</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">New York</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Ohio</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">Texas</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
-                    <tr><td style="padding:10px 16px;font-weight:500;">Washington</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🏛️ Alabama</td><td style="padding:10px 16px;text-align:center;color:var(--green);font-weight:600;font-size:0.8rem;">✅ Permissive</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🏔️ Alaska</td><td style="padding:10px 16px;text-align:center;color:var(--green);font-weight:600;font-size:0.8rem;">✅ Permissive</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🌵 Arizona</td><td style="padding:10px 16px;text-align:center;color:var(--green);font-weight:600;font-size:0.8rem;">✅ Permissive</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🌴 California</td><td style="padding:10px 16px;text-align:center;color:var(--red);font-weight:600;font-size:0.8rem;">🚫 Restrictive</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Restricted</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">⛰️ Colorado</td><td style="padding:10px 16px;text-align:center;color:var(--amber);font-weight:600;font-size:0.8rem;">⚠️ Moderate</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">3.5"</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🍂 Connecticut</td><td style="padding:10px 16px;text-align:center;color:var(--red);font-weight:600;font-size:0.8rem;">🚫 Restrictive</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">4"</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🐊 Florida</td><td style="padding:10px 16px;text-align:center;color:var(--green);font-weight:600;font-size:0.8rem;">✅ Permissive</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🏙️ Illinois</td><td style="padding:10px 16px;text-align:center;color:var(--amber);font-weight:600;font-size:0.8rem;">⚠️ Moderate</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Restricted</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🗽 New York</td><td style="padding:10px 16px;text-align:center;color:var(--red);font-weight:600;font-size:0.8rem;">🚫 Restrictive</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--amber);">Unclear</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🌰 Ohio</td><td style="padding:10px 16px;text-align:center;color:var(--green);font-weight:600;font-size:0.8rem;">✅ Permissive</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr style="border-bottom:1px solid var(--border);"><td style="padding:10px 16px;font-weight:500;">🤠 Texas</td><td style="padding:10px 16px;text-align:center;color:var(--green);font-weight:600;font-size:0.8rem;">✅ Permissive</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Legal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
+                    <tr><td style="padding:10px 16px;font-weight:500;">🌲 Washington</td><td style="padding:10px 16px;text-align:center;color:var(--amber);font-weight:600;font-size:0.8rem;">⚠️ Moderate</td><td style="padding:10px 16px;text-align:center;color:var(--red);">No</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--green);">Yes</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;color:var(--red);">Illegal</td><td style="padding:10px 16px;text-align:center;">None</td></tr>
                 </tbody>
             </table>
         </div>

@@ -191,6 +191,17 @@ body {
 }
 .klh-header__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
 
+/* === Rating Tag === */
+.klh-rating {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 14px; border-radius: var(--radius-pill);
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}
+.klh-rating--restrictive { background: var(--red-bg); color: #d70015; }
+.klh-rating--moderate { background: var(--amber-bg); color: #c93400; }
+.klh-rating--permissive { background: var(--green-bg); color: #248a3d; }
+
 /* === TLDR === */
 .klh-tldr { margin-bottom: 2.5rem; }
 .klh-tldr p {
@@ -399,7 +410,7 @@ body {
 
     <!-- Header -->
     <header class="klh-header">
-        <h1 itemprop="headline">California Knife Laws</h1>
+        <h1 itemprop="headline">🌴 California Knife Laws</h1>
         <div class="klh-header__meta">
             <span class="klh-header__dot"></span>
             Last verified <time datetime="2025-01-15" itemprop="dateModified">January 15, 2025</time> &middot; Updated for 2025
@@ -408,6 +419,7 @@ body {
 
     <!-- TLDR / Summary -->
     <section id="summary" class="klh-tldr" aria-label="Summary">
+        <div class="klh-rating klh-rating--restrictive">🚫 Restrictive State</div>
         <p>California allows open carry of most knives but restricts concealed carry of dirks and daggers. Switchblades and automatic knives with blades 2 inches or longer are illegal. There is no statewide blade length limit, but local cities like Los Angeles and San Francisco may impose stricter rules. No statewide preemption exists, so always check local ordinances.</p>
     </section>
 
