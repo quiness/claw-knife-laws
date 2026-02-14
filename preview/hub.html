@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State Knife Laws — All 50 States | KnifeInformer</title>
+<style>
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+}
+
+.klh-hub {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* === Typography === */
+.klh-hub h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+}
+
+/* === Breadcrumbs === */
+.klh-breadcrumbs {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+.klh-breadcrumbs a { color: #2563eb; text-decoration: none; }
+.klh-breadcrumbs a:hover { text-decoration: underline; }
+.klh-breadcrumbs__sep { margin: 0 0.4rem; color: #999; }
+
+/* === Badges === */
+.klh-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+.klh-badge--yes { background: #dcfce7; color: #166534; }
+.klh-badge--no { background: #fef2f2; color: #991b1b; }
+.klh-badge--unclear { background: #fef9c3; color: #854d0e; }
+.klh-badge__label { font-weight: 400; margin-right: 0.15rem; }
+
+/* === Buttons === */
+.klh-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+}
+.klh-btn--outline {
+    background: transparent;
+    color: #2563eb;
+    border-color: #2563eb;
+}
+.klh-btn--outline:hover { background: #eff6ff; }
+
+/* === Hero === */
+.klh-hub__hero {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+.klh-hub__subtitle {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* === Controls === */
+.klh-hub__controls { margin-bottom: 1rem; }
+
+.klh-search__input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.klh-search__input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Filters */
+.klh-hub__filters { margin-top: 0.75rem; }
+
+.klh-filter-toggle {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.klh-filter-toggle[aria-expanded="true"] {
+    background: #e0e7ff;
+    border-color: #2563eb;
+}
+.klh-filter-toggle__count {
+    background: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+    margin-left: 0.3rem;
+}
+
+.klh-filters-panel {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.klh-filter-group {
+    border: none;
+    padding: 0;
+    margin: 0 0 0.5rem;
+}
+.klh-filter-group legend {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+.klh-filter-group label {
+    display: inline-block;
+    margin-right: 0.75rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.klh-filters__clear {
+    background: none;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0;
+    margin-top: 0.25rem;
+}
+
+/* Compare CTA */
+.klh-hub__compare-cta { margin: 1rem 0; text-align: center; }
+
+/* === State Grid === */
+.klh-hub__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+.klh-state-card {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.klh-state-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+.klh-state-card[hidden] { display: none; }
+
+.klh-state-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+}
+.klh-state-card__name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+.klh-state-card__abbr {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 500;
+}
+.klh-state-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.25rem;
+}
+.klh-state-card__verified {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* No results */
+.klh-hub__no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* === Disclaimer === */
+.klh-disclaimer {
+    margin-top: 2rem;
+    padding: 0.75rem 1rem;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #92400e;
+}
+.klh-disclaimer p { margin: 0; }
+
+/* === Responsive === */
+@media (min-width: 640px) {
+    .klh-hub__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 768px) {
+    .klh-hub h1 { font-size: 2rem; }
+    .klh-hub__grid { grid-template-columns: repeat(3, 1fr); }
+    .klh-filter-group { display: inline-block; margin-right: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="klh-hub">
+
+    <!-- Breadcrumbs -->
+    <nav class="klh-breadcrumbs" aria-label="Breadcrumb">
+        <a href="#">Home</a>
+        <span class="klh-breadcrumbs__sep" aria-hidden="true">&rsaquo;</span>
+        <span aria-current="page">State Knife Laws</span>
+    </nav>
+
+    <!-- Hero -->
+    <header class="klh-hub__hero">
+        <h1>State Knife Laws &mdash; All 50 States</h1>
+        <p class="klh-hub__subtitle">Verified statutes and plain-English summaries for every US state. Search, filter, or compare.</p>
+    </header>
+
+    <!-- Search + Filters -->
+    <div class="klh-hub__controls">
+        <div class="klh-hub__search">
+            <label for="klh-search" class="screen-reader-text" style="position:absolute;left:-9999px">Search states</label>
+            <input type="text" id="klh-search" class="klh-search__input" placeholder="Search by state name or abbreviation&hellip;" autocomplete="off">
+        </div>
+
+        <div class="klh-hub__filters">
+            <button class="klh-filter-toggle" aria-expanded="false" aria-controls="klh-filters-panel">
+                Filters <span class="klh-filter-toggle__count" hidden></span>
+            </button>
+            <div id="klh-filters-panel" class="klh-filters-panel" hidden>
+                <fieldset class="klh-filter-group">
+                    <legend>Preemption</legend>
+                    <label><input type="radio" name="f_preemption" value="" checked> Any</label>
+                    <label><input type="radio" name="f_preemption" value="true"> Yes</label>
+                    <label><input type="radio" name="f_preemption" value="false"> No</label>
+                    <label><input type="radio" name="f_preemption" value="null"> Unknown</label>
+                </fieldset>
+                <fieldset class="klh-filter-group">
+                    <legend>Open Carry</legend>
+                    <label><input type="radio" name="f_open_carry" value="" checked> Any</label>
+                    <label><input type="radio" name="f_open_carry" value="true"> Yes</label>
+                    <label><input type="radio" name="f_open_carry" value="false"> No</label>
+                    <label><input type="radio" name="f_open_carry" value="null"> Unknown</label>
+                </fieldset>
+                <fieldset class="klh-filter-group">
+                    <legend>Concealed Carry</legend>
+                    <label><input type="radio" name="f_concealed_carry" value="" checked> Any</label>
+                    <label><input type="radio" name="f_concealed_carry" value="true"> Yes</label>
+                    <label><input type="radio" name="f_concealed_carry" value="false"> No</label>
+                    <label><input type="radio" name="f_concealed_carry" value="null"> Unknown</label>
+                </fieldset>
+                <fieldset class="klh-filter-group">
+                    <legend>Switchblade</legend>
+                    <label><input type="radio" name="f_switchblade" value="" checked> Any</label>
+                    <label><input type="radio" name="f_switchblade" value="true"> Legal</label>
+                    <label><input type="radio" name="f_switchblade" value="false"> Illegal</label>
+                    <label><input type="radio" name="f_switchblade" value="null"> Unknown</label>
+                </fieldset>
+                <fieldset class="klh-filter-group">
+                    <legend>Automatic Knife</legend>
+                    <label><input type="radio" name="f_automatic" value="" checked> Any</label>
+                    <label><input type="radio" name="f_automatic" value="true"> Legal</label>
+                    <label><input type="radio" name="f_automatic" value="false"> Illegal</label>
+                    <label><input type="radio" name="f_automatic" value="null"> Unknown</label>
+                </fieldset>
+                <fieldset class="klh-filter-group">
+                    <legend>Blade Length Limit</legend>
+                    <label><input type="radio" name="f_blade_limit" value="" checked> Any</label>
+                    <label><input type="radio" name="f_blade_limit" value="yes"> Has limit</label>
+                    <label><input type="radio" name="f_blade_limit" value="no"> No limit</label>
+                </fieldset>
+                <button class="klh-filters__clear" type="button">Clear all filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare CTA -->
+    <div class="klh-hub__compare-cta">
+        <a href="#" class="klh-btn klh-btn--outline">Compare Two States &rarr;</a>
+    </div>
+
+    <!-- State Grid -->
+    <div class="klh-hub__grid" id="klh-state-grid">
+
+        <!-- Alabama -->
+        <a href="#" class="klh-state-card" data-state="alabama" data-abbr="al" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Alabama</h2>
+                <span class="klh-state-card__abbr">AL</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Preemption:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Alaska -->
+        <a href="#" class="klh-state-card" data-state="alaska" data-abbr="ak" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Alaska</h2>
+                <span class="klh-state-card__abbr">AK</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Preemption:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Arizona -->
+        <a href="#" class="klh-state-card" data-state="arizona" data-abbr="az" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Arizona</h2>
+                <span class="klh-state-card__abbr">AZ</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Preemption:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- California -->
+        <a href="california.html" class="klh-state-card" data-state="california" data-abbr="ca" data-preemption="false" data-open-carry="true" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">California</h2>
+                <span class="klh-state-card__abbr">CA</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Preemption:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Switchblade:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Auto:</span> No</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Colorado -->
+        <a href="#" class="klh-state-card" data-state="colorado" data-abbr="co" data-preemption="false" data-open-carry="true" data-concealed-carry="true" data-switchblade="false" data-automatic="false" data-blade-limit="yes">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Colorado</h2>
+                <span class="klh-state-card__abbr">CO</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Preemption:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Switchblade:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Auto:</span> No</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Connecticut -->
+        <a href="#" class="klh-state-card" data-state="connecticut" data-abbr="ct" data-preemption="false" data-open-carry="null" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="yes">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Connecticut</h2>
+                <span class="klh-state-card__abbr">CT</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Preemption:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Switchblade:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Auto:</span> No</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Florida -->
+        <a href="#" class="klh-state-card" data-state="florida" data-abbr="fl" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Florida</h2>
+                <span class="klh-state-card__abbr">FL</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Preemption:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Illinois -->
+        <a href="#" class="klh-state-card" data-state="illinois" data-abbr="il" data-preemption="false" data-open-carry="true" data-concealed-carry="null" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Illinois</h2>
+                <span class="klh-state-card__abbr">IL</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Preemption:</span> No</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- New York -->
+        <a href="#" class="klh-state-card" data-state="new york" data-abbr="ny" data-preemption="false" data-open-carry="null" data-concealed-carry="null" data-switchblade="false" data-automatic="false" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">New York</h2>
+                <span class="klh-state-card__abbr">NY</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Preemption:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Switchblade:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Auto:</span> No</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Ohio -->
+        <a href="#" class="klh-state-card" data-state="ohio" data-abbr="oh" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Ohio</h2>
+                <span class="klh-state-card__abbr">OH</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Preemption:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Texas -->
+        <a href="#" class="klh-state-card" data-state="texas" data-abbr="tx" data-preemption="true" data-open-carry="true" data-concealed-carry="true" data-switchblade="true" data-automatic="true" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Texas</h2>
+                <span class="klh-state-card__abbr">TX</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Preemption:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Switchblade:</span> Yes</span>
+                <span class="klh-badge klh-badge--yes"><span class="klh-badge__label">Auto:</span> Yes</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+        <!-- Washington -->
+        <a href="#" class="klh-state-card" data-state="washington" data-abbr="wa" data-preemption="false" data-open-carry="true" data-concealed-carry="true" data-switchblade="false" data-automatic="false" data-blade-limit="no">
+            <div class="klh-state-card__header">
+                <h2 class="klh-state-card__name">Washington</h2>
+                <span class="klh-state-card__abbr">WA</span>
+            </div>
+            <div class="klh-state-card__badges">
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Preemption:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Switchblade:</span> No</span>
+                <span class="klh-badge klh-badge--no"><span class="klh-badge__label">Auto:</span> No</span>
+            </div>
+            <div class="klh-state-card__verified">Verified 2025-01-15</div>
+        </a>
+
+    </div>
+
+    <p class="klh-hub__no-results" id="klh-no-results" hidden>No states match your search or filters.</p>
+
+    <!-- Disclaimer -->
+    <div class="klh-disclaimer">
+        <p><strong>Disclaimer:</strong> This information is provided for educational purposes only and does not constitute legal advice. Laws change frequently. Always verify current statutes and consult a qualified attorney for legal guidance specific to your situation.</p>
+    </div>
+</div>
+
+<script>
+(function () {
+    'use strict';
+    var searchInput = document.getElementById('klh-search');
+    var stateGrid = document.getElementById('klh-state-grid');
+    var noResults = document.getElementById('klh-no-results');
+    var filterToggle = document.querySelector('.klh-filter-toggle');
+    var filtersPanel = document.getElementById('klh-filters-panel');
+    var clearFiltersBtn = document.querySelector('.klh-filters__clear');
+    var cards = stateGrid.querySelectorAll('.klh-state-card');
+
+    searchInput.addEventListener('input', function () { applyFilters(); });
+
+    filterToggle.addEventListener('click', function () {
+        var expanded = filterToggle.getAttribute('aria-expanded') === 'true';
+        filterToggle.setAttribute('aria-expanded', String(!expanded));
+        filtersPanel.hidden = expanded;
+    });
+
+    var radios = filtersPanel.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radios.length; i++) {
+        radios[i].addEventListener('change', function () { applyFilters(); updateFilterCount(); });
+    }
+
+    clearFiltersBtn.addEventListener('click', function () {
+        var r = filtersPanel.querySelectorAll('input[type="radio"]');
+        for (var i = 0; i < r.length; i++) { r[i].checked = r[i].value === ''; }
+        applyFilters();
+        updateFilterCount();
+    });
+
+    function applyFilters() {
+        var query = searchInput.value.toLowerCase().trim();
+        var filters = getActiveFilters();
+        var visibleCount = 0;
+
+        for (var i = 0; i < cards.length; i++) {
+            var card = cards[i];
+            var matchesSearch = true;
+            var matchesFilters = true;
+
+            if (query) {
+                var name = (card.getAttribute('data-state') || '').toLowerCase();
+                var abbr = (card.getAttribute('data-abbr') || '').toLowerCase();
+                matchesSearch = name.indexOf(query) !== -1 || abbr.indexOf(query) !== -1;
+            }
+
+            if (matchesFilters && filters.preemption !== '') matchesFilters = card.getAttribute('data-preemption') === filters.preemption;
+            if (matchesFilters && filters.open_carry !== '') matchesFilters = card.getAttribute('data-open-carry') === filters.open_carry;
+            if (matchesFilters && filters.concealed_carry !== '') matchesFilters = card.getAttribute('data-concealed-carry') === filters.concealed_carry;
+            if (matchesFilters && filters.switchblade !== '') matchesFilters = card.getAttribute('data-switchblade') === filters.switchblade;
+            if (matchesFilters && filters.automatic !== '') matchesFilters = card.getAttribute('data-automatic') === filters.automatic;
+            if (matchesFilters && filters.blade_limit !== '') matchesFilters = card.getAttribute('data-blade-limit') === filters.blade_limit;
+
+            card.hidden = !(matchesSearch && matchesFilters);
+            if (matchesSearch && matchesFilters) visibleCount++;
+        }
+        noResults.hidden = visibleCount > 0;
+    }
+
+    function getActiveFilters() {
+        return {
+            preemption: getRadioValue('f_preemption'),
+            open_carry: getRadioValue('f_open_carry'),
+            concealed_carry: getRadioValue('f_concealed_carry'),
+            switchblade: getRadioValue('f_switchblade'),
+            automatic: getRadioValue('f_automatic'),
+            blade_limit: getRadioValue('f_blade_limit'),
+        };
+    }
+
+    function getRadioValue(name) {
+        var checked = filtersPanel.querySelector('input[name="' + name + '"]:checked');
+        return checked ? checked.value : '';
+    }
+
+    function updateFilterCount() {
+        var filters = getActiveFilters();
+        var count = 0;
+        for (var key in filters) { if (filters[key] !== '') count++; }
+        var countEl = filterToggle.querySelector('.klh-filter-toggle__count');
+        countEl.textContent = count;
+        countEl.hidden = count === 0;
+    }
+})();
+</script>
+
+</body>
+</html>
