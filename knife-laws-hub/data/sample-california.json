@@ -1,0 +1,135 @@
+{
+  "state": "California",
+  "abbreviation": "CA",
+  "last_verified": "2025-01-15",
+  "effective_date": null,
+
+  "preemption": {
+    "has_statewide_preemption": false,
+    "details": "California does not have statewide preemption for knife laws. Local municipalities (e.g., Los Angeles, San Francisco) may enact stricter knife ordinances than state law.",
+    "statutes": []
+  },
+
+  "carry": {
+    "open_carry": {
+      "legal": true,
+      "details": "Open carry of most knives is generally legal in California. Folding knives of any blade length may be carried openly. Fixed-blade knives must be carried in a sheath worn openly suspended from the waist.",
+      "statutes": [
+        {
+          "code_section": "Cal. Penal Code \u00a7 20200",
+          "title": "Carrying concealed dirk or dagger prohibited",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20200.&lawCode=PEN",
+          "effective_date": null
+        }
+      ]
+    },
+    "concealed_carry": {
+      "legal": null,
+      "details": "Concealed carry depends on the type of knife. Folding knives (non-locking and locking) may generally be carried concealed. Dirks, daggers, and fixed-blade knives cannot be concealed. A 'dirk or dagger' is broadly defined as any knife or instrument capable of ready use as a stabbing weapon that may inflict great bodily injury or death.",
+      "statutes": [
+        {
+          "code_section": "Cal. Penal Code \u00a7 21310",
+          "title": "Carrying concealed dirk or dagger",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21310.&lawCode=PEN",
+          "effective_date": null
+        },
+        {
+          "code_section": "Cal. Penal Code \u00a7 16470",
+          "title": "Definition of dirk or dagger",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=16470.&lawCode=PEN",
+          "effective_date": null
+        }
+      ]
+    }
+  },
+
+  "blade_length": {
+    "statewide_limit_inches": null,
+    "details": "California does not impose a statewide blade length limit. However, local ordinances may restrict blade length (e.g., Los Angeles restricts concealed carry of knives with blades over 3 inches).",
+    "statutes": []
+  },
+
+  "knife_types": {
+    "switchblade": {
+      "legal": false,
+      "details": "Switchblades with a blade of 2 inches or longer are illegal to carry, possess in a vehicle, sell, or otherwise transfer. Switchblades with a blade shorter than 2 inches are legal.",
+      "statutes": [
+        {
+          "code_section": "Cal. Penal Code \u00a7 21510",
+          "title": "Switchblade knife prohibitions",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510.&lawCode=PEN",
+          "effective_date": null
+        },
+        {
+          "code_section": "Cal. Penal Code \u00a7 17235",
+          "title": "Definition of switchblade knife",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17235.&lawCode=PEN",
+          "effective_date": null
+        }
+      ]
+    },
+    "automatic": {
+      "legal": false,
+      "details": "Automatic knives fall under the switchblade definition in California. If the blade is 2 inches or longer and opens automatically, it is illegal.",
+      "statutes": [
+        {
+          "code_section": "Cal. Penal Code \u00a7 21510",
+          "title": "Switchblade knife prohibitions",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510.&lawCode=PEN",
+          "effective_date": null
+        }
+      ]
+    },
+    "assisted_opening": {
+      "legal": true,
+      "details": "Assisted-opening knives are generally legal in California. They are distinguished from switchblades because the user must apply manual force to begin opening the blade.",
+      "statutes": []
+    },
+    "ballistic_knife": {
+      "legal": false,
+      "details": "Ballistic knives are prohibited under both federal law and California Penal Code.",
+      "statutes": [
+        {
+          "code_section": "Cal. Penal Code \u00a7 21110",
+          "title": "Ballistic knife prohibitions",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21110.&lawCode=PEN",
+          "effective_date": null
+        }
+      ]
+    }
+  },
+
+  "restricted_locations": {
+    "summary": "Schools (K-12 and colleges), government buildings, courts, airports, and other locations as defined by statute.",
+    "details": "It is illegal to bring any knife with a blade longer than 2.5 inches onto K-12 school grounds. Possession of weapons on state or local public buildings and at public meetings is also restricted.",
+    "statutes": [
+      {
+        "code_section": "Cal. Penal Code \u00a7 626.10",
+        "title": "Weapons on school grounds",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=626.10.&lawCode=PEN",
+        "effective_date": null
+      },
+      {
+        "code_section": "Cal. Penal Code \u00a7 171b",
+        "title": "Weapons in state or local public buildings",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=171b.&lawCode=PEN",
+        "effective_date": null
+      }
+    ]
+  },
+
+  "sources": {
+    "primary_official": [
+      {
+        "title": "California Legislative Information — Penal Code",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=PEN"
+      }
+    ],
+    "secondary_mirrors": [
+      {
+        "title": "Justia — California Penal Code",
+        "url": "https://law.justia.com/codes/california/penal-code/"
+      }
+    ]
+  }
+}

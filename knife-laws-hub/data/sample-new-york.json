@@ -1,0 +1,129 @@
+{
+  "state": "New York",
+  "abbreviation": "NY",
+  "last_verified": "2025-01-15",
+  "effective_date": null,
+
+  "preemption": {
+    "has_statewide_preemption": false,
+    "details": "New York does not have statewide preemption for knife laws. New York City, for example, enforces significantly stricter knife regulations than state law, including the (now-repealed) gravity knife enforcement under NYC Administrative Code.",
+    "statutes": []
+  },
+
+  "carry": {
+    "open_carry": {
+      "legal": null,
+      "details": "New York does not have a clear statewide rule on open carry of knives. Legality depends on the type of knife and local jurisdiction. Carrying a knife openly with intent to use unlawfully against another is a crime. NYC has additional restrictions.",
+      "statutes": [
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.01",
+          "title": "Criminal possession of a weapon in the fourth degree",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+          "effective_date": null
+        }
+      ]
+    },
+    "concealed_carry": {
+      "legal": null,
+      "details": "Concealed carry depends on the type of knife and intent. It is illegal to possess certain dangerous knives (switchblades, gravity knives, pilum ballistic knives, cane swords, etc.) with intent to use unlawfully. Common pocketknives carried without unlawful intent are generally permitted.",
+      "statutes": [
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.01",
+          "title": "Criminal possession of a weapon in the fourth degree",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+          "effective_date": null
+        },
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.00",
+          "title": "Weapons definitions",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.00",
+          "effective_date": null
+        }
+      ]
+    }
+  },
+
+  "blade_length": {
+    "statewide_limit_inches": null,
+    "details": "New York does not impose a statewide blade length limit. However, NYC Administrative Code \u00a7 10-133 prohibits carrying a knife with a blade of 4 inches or longer in public.",
+    "statutes": []
+  },
+
+  "knife_types": {
+    "switchblade": {
+      "legal": false,
+      "details": "Switchblades (any knife with a blade that opens automatically by pressing a button, spring, or other device in the handle) are criminal to possess in the fourth degree under NY Penal Law \u00a7 265.01.",
+      "statutes": [
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.01(1)",
+          "title": "Criminal possession of a weapon — switchblade",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+          "effective_date": null
+        },
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.00(4)",
+          "title": "Definition of switchblade knife",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.00",
+          "effective_date": null
+        }
+      ]
+    },
+    "automatic": {
+      "legal": false,
+      "details": "Automatic knives are treated as switchblades under New York law and are therefore illegal to possess.",
+      "statutes": [
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.01(1)",
+          "title": "Criminal possession of a weapon — switchblade",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+          "effective_date": null
+        }
+      ]
+    },
+    "assisted_opening": {
+      "legal": null,
+      "details": "New York law does not specifically address assisted-opening knives. Whether an assisted-opening knife is classified as a switchblade depends on interpretation. Some legal opinions distinguish them from switchblades because manual force is required. Exercise caution.",
+      "statutes": []
+    },
+    "ballistic_knife": {
+      "legal": false,
+      "details": "Ballistic knives (referred to as 'pilum ballistic knives' in the statute) are specifically listed as illegal weapons under NY Penal Law.",
+      "statutes": [
+        {
+          "code_section": "N.Y. Penal Law \u00a7 265.01(1)",
+          "title": "Criminal possession — pilum ballistic knife",
+          "url": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
+          "effective_date": null
+        }
+      ]
+    }
+  },
+
+  "restricted_locations": {
+    "summary": "Schools, government buildings, courts, airports. NYC has additional broad restrictions on knives in public.",
+    "details": "Possession of weapons (including certain knives) on school grounds is a felony under NY Penal Law \u00a7 265.01-a. NYC Administrative Code imposes additional restrictions on carrying knives in public view or with blades of 4 inches or more.",
+    "statutes": [
+      {
+        "code_section": "N.Y. Penal Law \u00a7 265.01-a",
+        "title": "Criminal possession of a weapon on school grounds",
+        "url": "https://www.nysenate.gov/legislation/laws/PEN/265.01-A",
+        "effective_date": null
+      }
+    ]
+  },
+
+  "sources": {
+    "primary_official": [
+      {
+        "title": "New York State Senate — Penal Law Article 265",
+        "url": "https://www.nysenate.gov/legislation/laws/PEN/A265"
+      }
+    ],
+    "secondary_mirrors": [
+      {
+        "title": "Justia — New York Penal Law Article 265",
+        "url": "https://law.justia.com/codes/new-york/penal/"
+      }
+    ]
+  }
+}

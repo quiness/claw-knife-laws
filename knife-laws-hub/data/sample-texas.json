@@ -1,0 +1,140 @@
+{
+  "state": "Texas",
+  "abbreviation": "TX",
+  "last_verified": "2025-01-15",
+  "effective_date": null,
+
+  "preemption": {
+    "has_statewide_preemption": true,
+    "details": "Texas enacted statewide preemption for knife laws effective September 1, 2015 (HB 905). Municipalities cannot adopt or enforce ordinances that are more restrictive than state law regarding knives.",
+    "statutes": [
+      {
+        "code_section": "Tex. Local Gov't Code \u00a7 229.001(b)",
+        "title": "Firearms and knives preemption",
+        "url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.229.htm",
+        "effective_date": "2015-09-01"
+      }
+    ]
+  },
+
+  "carry": {
+    "open_carry": {
+      "legal": true,
+      "details": "Open carry of knives, including large knives ('location-restricted knives' with blades over 5.5 inches), is generally legal in Texas as of September 1, 2017 (HB 1935). Location-restricted knives may not be carried in certain locations.",
+      "statutes": [
+        {
+          "code_section": "Tex. Penal Code \u00a7 46.02",
+          "title": "Unlawful carrying weapons",
+          "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+          "effective_date": null
+        },
+        {
+          "code_section": "Tex. Penal Code \u00a7 46.01(6)",
+          "title": "Definition of location-restricted knife",
+          "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+          "effective_date": "2017-09-01"
+        }
+      ]
+    },
+    "concealed_carry": {
+      "legal": true,
+      "details": "Concealed carry of knives is legal in Texas, including knives with blades over 5.5 inches. Location-restricted knives (blades over 5.5 inches) cannot be carried in certain locations regardless of carry method.",
+      "statutes": [
+        {
+          "code_section": "Tex. Penal Code \u00a7 46.02",
+          "title": "Unlawful carrying weapons",
+          "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+          "effective_date": null
+        }
+      ]
+    }
+  },
+
+  "blade_length": {
+    "statewide_limit_inches": null,
+    "details": "Texas does not have a general blade length limit. However, knives with blades over 5.5 inches are classified as 'location-restricted knives' and may not be carried in certain locations (schools, bars, sporting events, etc.).",
+    "statutes": [
+      {
+        "code_section": "Tex. Penal Code \u00a7 46.01(6)",
+        "title": "Definition of location-restricted knife",
+        "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+        "effective_date": "2017-09-01"
+      }
+    ]
+  },
+
+  "knife_types": {
+    "switchblade": {
+      "legal": true,
+      "details": "Switchblades are legal in Texas. The 2013 revision of Texas knife law (HB 1862) removed switchblades from the list of prohibited weapons.",
+      "statutes": [
+        {
+          "code_section": "Tex. Penal Code \u00a7 46.01",
+          "title": "Definitions (weapons)",
+          "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+          "effective_date": null
+        }
+      ]
+    },
+    "automatic": {
+      "legal": true,
+      "details": "Automatic knives are legal in Texas. They may be carried openly or concealed. If the blade exceeds 5.5 inches, the knife is subject to location restrictions.",
+      "statutes": [
+        {
+          "code_section": "Tex. Penal Code \u00a7 46.01",
+          "title": "Definitions (weapons)",
+          "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+          "effective_date": null
+        }
+      ]
+    },
+    "assisted_opening": {
+      "legal": true,
+      "details": "Assisted-opening knives are legal in Texas with no specific restrictions beyond the general location-restricted knife rules for blades over 5.5 inches.",
+      "statutes": []
+    },
+    "ballistic_knife": {
+      "legal": false,
+      "details": "Ballistic knives are prohibited under federal law. Texas does not specifically list them as an illegal knife, but federal law (15 U.S.C. \u00a7 1245) prohibits possession and sale.",
+      "statutes": []
+    }
+  },
+
+  "restricted_locations": {
+    "summary": "Schools, polling places, courts, racetracks, bars (51% establishments), sporting events, correctional facilities, hospitals, amusement parks, and churches.",
+    "details": "Location-restricted knives (blades over 5.5 inches) may not be carried in the locations listed in Tex. Penal Code \u00a7 46.03 and \u00a7 46.035. Regular knives (blades 5.5 inches or less) are generally permitted in these locations.",
+    "statutes": [
+      {
+        "code_section": "Tex. Penal Code \u00a7 46.03",
+        "title": "Places weapons prohibited",
+        "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+        "effective_date": null
+      },
+      {
+        "code_section": "Tex. Penal Code \u00a7 46.035",
+        "title": "Unlawful carry of handgun or location-restricted knife",
+        "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm",
+        "effective_date": null
+      }
+    ]
+  },
+
+  "sources": {
+    "primary_official": [
+      {
+        "title": "Texas Statutes — Penal Code Chapter 46",
+        "url": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm"
+      },
+      {
+        "title": "Texas Local Government Code \u00a7 229.001",
+        "url": "https://statutes.capitol.texas.gov/Docs/LG/htm/LG.229.htm"
+      }
+    ],
+    "secondary_mirrors": [
+      {
+        "title": "Justia — Texas Penal Code Chapter 46",
+        "url": "https://law.justia.com/codes/texas/penal-code/title-10/chapter-46/"
+      }
+    ]
+  }
+}
