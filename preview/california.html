@@ -13,29 +13,30 @@
     --bg: #f5f5f7;
     --surface: #ffffff;
     --text: #1d1d1f;
-    --text-secondary: #86868b;
+    --text-secondary: #6e6e73;
     --text-tertiary: #aeaeb2;
     --accent: #0071e3;
     --accent-hover: #0077ed;
-    --border: rgba(0,0,0,0.06);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-    --shadow-md: 0 4px 14px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
-    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-    --radius: 16px;
-    --radius-sm: 10px;
+    --border: rgba(0,0,0,0.04);
+    --divider: rgba(0,0,0,0.08);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 28px rgba(0,0,0,0.08);
+    --radius: 18px;
+    --radius-sm: 12px;
     --radius-pill: 100px;
-    --green: #34c759;
-    --green-bg: rgba(52, 199, 89, 0.1);
-    --red: #ff3b30;
-    --red-bg: rgba(255, 59, 48, 0.08);
+    --green: #30d158;
+    --green-bg: rgba(48, 209, 88, 0.1);
+    --red: #ff453a;
+    --red-bg: rgba(255, 69, 58, 0.08);
     --amber: #ff9f0a;
     --amber-bg: rgba(255, 159, 10, 0.1);
-    --transition: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.47;
     color: var(--text);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
@@ -43,82 +44,79 @@ body {
 }
 
 /* === Layout === */
-.klh-state {
-    max-width: 760px;
+.klh-page {
+    max-width: 720px;
     margin: 0 auto;
-    padding: 2rem 1.5rem 3rem;
+    padding: 2rem 1.5rem 4rem;
 }
 
-/* === Breadcrumbs === */
-.klh-breadcrumbs {
-    font-size: 0.8rem;
-    margin-bottom: 2rem;
-    color: var(--text-tertiary);
-    font-weight: 500;
-    letter-spacing: -0.01em;
-}
-.klh-breadcrumbs a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: opacity var(--transition);
-}
-.klh-breadcrumbs a:hover { opacity: 0.7; }
-.klh-breadcrumbs__sep { margin: 0 0.5rem; color: var(--text-tertiary); }
-
-/* === Header === */
-.klh-state__header {
-    text-align: center;
-    padding: 2rem 0 1.5rem;
-}
-.klh-state__header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    background: linear-gradient(135deg, var(--text) 0%, #515154 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-}
-.klh-state__verified {
+/* === Back link === */
+.klh-back {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    color: var(--text-tertiary);
-    font-size: 0.82rem;
-    font-weight: 500;
+    gap: 4px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--accent);
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    transition: opacity var(--transition);
 }
-.klh-state__verified-dot {
-    width: 7px;
-    height: 7px;
+.klh-back:hover { opacity: 0.7; }
+.klh-back svg { width: 16px; height: 16px; }
+
+/* === Header === */
+.klh-header {
+    margin-bottom: 2rem;
+}
+.klh-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+}
+.klh-header__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    font-weight: 400;
+}
+.klh-header__dot {
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: var(--green);
-    display: inline-block;
 }
 
 /* === TLDR === */
 .klh-tldr {
-    text-align: center;
-    max-width: 580px;
-    margin: 0 auto 0.5rem;
+    margin-bottom: 2.5rem;
 }
 .klh-tldr p {
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 1.12rem;
+    line-height: 1.58;
     color: var(--text-secondary);
+    font-weight: 400;
     letter-spacing: -0.01em;
 }
 
-/* === Quick Answer Grid === */
-.klh-quick-answer {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    box-shadow: var(--shadow-sm);
+/* === Divider === */
+.klh-divider {
+    border: none;
+    height: 1px;
+    background: var(--divider);
+    margin: 2.5rem 0;
 }
-.klh-quick-answer__title {
+
+/* === At a Glance === */
+.klh-glance {
+    margin-bottom: 2.5rem;
+}
+.klh-section-label {
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -126,42 +124,44 @@ body {
     color: var(--text-tertiary);
     margin-bottom: 1rem;
 }
-.klh-quick-answer__grid {
+.klh-glance__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 1px;
+    background: var(--divider);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
 }
-.klh-qa-item {
+.klh-glance__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 14px;
-    background: var(--bg);
-    border-radius: var(--radius-sm);
-    transition: transform var(--transition);
+    padding: 14px 18px;
+    background: var(--surface);
 }
-.klh-qa-item:hover { transform: scale(1.02); }
-.klh-qa-item__label {
-    font-size: 0.85rem;
+.klh-glance__label {
+    font-size: 0.88rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text);
+    letter-spacing: -0.01em;
 }
 
 /* === Badges === */
 .klh-badge {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 3px 10px;
+    gap: 5px;
+    padding: 4px 11px;
     border-radius: var(--radius-pill);
     font-size: 0.72rem;
     font-weight: 600;
     white-space: nowrap;
     letter-spacing: 0.01em;
 }
-.klh-badge--yes { background: var(--green-bg); color: var(--green); }
-.klh-badge--no { background: var(--red-bg); color: var(--red); }
-.klh-badge--unclear { background: var(--amber-bg); color: var(--amber); }
+.klh-badge--yes { background: var(--green-bg); color: #248a3d; }
+.klh-badge--no { background: var(--red-bg); color: #d70015; }
+.klh-badge--unclear { background: var(--amber-bg); color: #c93400; }
 .klh-badge__dot {
     width: 6px;
     height: 6px;
@@ -174,19 +174,7 @@ body {
 
 /* === Takeaways === */
 .klh-takeaways {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    margin: 1rem 0;
-    box-shadow: var(--shadow-sm);
-}
-.klh-takeaways__title {
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-tertiary);
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 .klh-takeaways ul {
     list-style: none;
@@ -195,36 +183,39 @@ body {
 }
 .klh-takeaways li {
     position: relative;
-    padding: 8px 0 8px 20px;
-    font-size: 0.9rem;
+    padding: 12px 0 12px 18px;
+    font-size: 0.92rem;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.55;
     border-bottom: 1px solid var(--border);
 }
-.klh-takeaways li:last-child { border-bottom: none; }
+.klh-takeaways li:last-child { border-bottom: none; padding-bottom: 0; }
+.klh-takeaways li:first-child { padding-top: 0; }
 .klh-takeaways li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 14px;
-    width: 6px;
-    height: 6px;
+    top: 19px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--accent);
-    opacity: 0.5;
 }
+.klh-takeaways li:first-child::before { top: 7px; }
 
-/* === Compare CTA === */
-.klh-state__compare-cta { margin: 1.5rem 0; text-align: center; }
+/* === Compare === */
+.klh-compare {
+    margin-bottom: 2.5rem;
+}
 .klh-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 12px 24px;
+    padding: 11px 22px;
     border-radius: var(--radius-pill);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -234,15 +225,15 @@ body {
 .klh-btn--outline {
     background: transparent;
     color: var(--accent);
-    border: 1.5px solid rgba(0, 113, 227, 0.3);
+    border: 1px solid rgba(0, 113, 227, 0.25);
 }
 .klh-btn--outline:hover {
-    background: rgba(0, 113, 227, 0.06);
-    border-color: var(--accent);
+    background: rgba(0, 113, 227, 0.04);
+    border-color: rgba(0, 113, 227, 0.5);
 }
 
-/* === Accordion === */
-.klh-accordion {
+/* === Detail Sections === */
+.klh-section {
     background: var(--surface);
     border-radius: var(--radius);
     margin-bottom: 10px;
@@ -250,9 +241,9 @@ body {
     overflow: hidden;
     transition: box-shadow var(--transition);
 }
-.klh-accordion:hover { box-shadow: var(--shadow-md); }
-.klh-accordion__title {
-    padding: 16px 20px;
+.klh-section:hover { box-shadow: var(--shadow-md); }
+.klh-section__title {
+    padding: 18px 22px;
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
@@ -261,45 +252,48 @@ body {
     justify-content: space-between;
     align-items: center;
     color: var(--text);
-    letter-spacing: -0.01em;
-    transition: color var(--transition);
+    letter-spacing: -0.015em;
     -webkit-user-select: none;
     user-select: none;
 }
-.klh-accordion__title::-webkit-details-marker { display: none; }
-.klh-accordion__title::after {
+.klh-section__title::-webkit-details-marker { display: none; }
+.klh-section__title::after {
     content: '';
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid var(--text-tertiary);
-    border-bottom: 2px solid var(--text-tertiary);
+    width: 7px;
+    height: 7px;
+    border-right: 1.5px solid var(--text-tertiary);
+    border-bottom: 1.5px solid var(--text-tertiary);
     transform: rotate(-45deg);
     transition: transform 0.2s ease;
     flex-shrink: 0;
-    margin-left: 12px;
 }
-.klh-accordion[open] > .klh-accordion__title::after {
+.klh-section[open] > .klh-section__title::after {
     transform: rotate(45deg);
 }
 
-.klh-accordion__content {
-    padding: 0 20px 20px;
-    animation: klh-fadeIn 0.25s ease-out;
+.klh-section__body {
+    padding: 0 22px 22px;
+    animation: klh-fadeIn 0.2s ease-out;
 }
 @keyframes klh-fadeIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.klh-accordion__content p {
+.klh-section__body p {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.65;
+    line-height: 1.6;
     margin-bottom: 0.5rem;
 }
-.klh-accordion__content h4 {
+.klh-section__body p:last-child { margin-bottom: 0; }
+.klh-section__body p strong {
+    color: var(--text);
+    font-weight: 600;
+}
+.klh-section__body h4 {
     font-size: 0.9rem;
-    margin: 1.25rem 0 0.35rem;
+    margin: 1.5rem 0 0.4rem;
     font-weight: 600;
     color: var(--text);
     display: flex;
@@ -307,89 +301,81 @@ body {
     gap: 8px;
     letter-spacing: -0.01em;
 }
-.klh-accordion__content h4:first-child { margin-top: 0; }
+.klh-section__body h4:first-child { margin-top: 0; }
 
 /* === Statutes === */
-.klh-statutes { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.klh-statutes { list-style: none; padding: 0; margin: 8px 0 0; }
 .klh-statute {
     font-size: 0.82rem;
-    padding: 6px 12px;
+    padding: 8px 14px;
     margin: 4px 0;
     color: var(--text-secondary);
     background: var(--bg);
-    border-radius: 8px;
-    transition: background var(--transition);
+    border-radius: var(--radius-sm);
+    line-height: 1.5;
 }
-.klh-statute:hover { background: rgba(0, 113, 227, 0.04); }
 .klh-statute a {
     color: var(--accent);
     text-decoration: none;
     font-weight: 500;
-    transition: opacity var(--transition);
 }
-.klh-statute a:hover { opacity: 0.7; }
-.klh-statute__dash { color: var(--text-tertiary); margin: 0 6px; }
+.klh-statute a:hover { text-decoration: underline; }
+.klh-statute__sep { color: var(--text-tertiary); margin: 0 6px; }
 
 /* === Disclaimer === */
 .klh-disclaimer {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding: 16px 20px;
     background: var(--surface);
     border-radius: var(--radius);
-    font-size: 0.82rem;
-    color: var(--text-secondary);
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
     line-height: 1.6;
     box-shadow: var(--shadow-sm);
-    border-left: 3px solid var(--amber);
 }
 .klh-disclaimer strong {
-    color: var(--text);
+    color: var(--text-secondary);
     font-weight: 600;
 }
 .klh-disclaimer p { margin: 0; }
 
-/* === Back Nav === */
-.klh-state__nav {
-    margin: 2rem 0;
-    text-align: center;
+/* === Footer Nav === */
+.klh-footer-nav {
+    margin-top: 2.5rem;
 }
-.klh-state__nav a {
+.klh-footer-nav a {
     color: var(--accent);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: opacity var(--transition);
+    font-size: 0.88rem;
+    font-weight: 400;
 }
-.klh-state__nav a:hover { opacity: 0.7; }
+.klh-footer-nav a:hover { text-decoration: underline; }
 
 /* === Responsive === */
 @media (min-width: 768px) {
-    .klh-state { padding: 2.5rem 2rem 4rem; }
-    .klh-state__header h1 { font-size: 3rem; }
-    .klh-quick-answer__grid { grid-template-columns: repeat(3, 1fr); }
+    .klh-page { padding: 3rem 2rem 5rem; }
+    .klh-header h1 { font-size: 3.2rem; }
+    .klh-glance__grid { grid-template-columns: repeat(3, 1fr); }
 }
 </style>
 </head>
 <body>
 
-<div class="klh-state">
+<div class="klh-page">
 
-    <!-- Breadcrumbs -->
-    <nav class="klh-breadcrumbs" aria-label="Breadcrumb">
-        <a href="#">Home</a>
-        <span class="klh-breadcrumbs__sep" aria-hidden="true">/</span>
-        <a href="hub.html">State Knife Laws</a>
-        <span class="klh-breadcrumbs__sep" aria-hidden="true">/</span>
-        <span aria-current="page">California</span>
-    </nav>
+    <!-- Back -->
+    <a href="hub.html" class="klh-back">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="10 3 5 8 10 13"/></svg>
+        All State Knife Laws
+    </a>
 
-    <!-- Title + Verified -->
-    <header class="klh-state__header">
+    <!-- Header -->
+    <header class="klh-header">
         <h1>California Knife Laws</h1>
-        <p class="klh-state__verified">
-            <span class="klh-state__verified-dot"></span>
-            Last verified: <time datetime="2025-01-15">January 15, 2025</time>
-        </p>
+        <div class="klh-header__meta">
+            <span class="klh-header__dot"></span>
+            Last verified <time datetime="2025-01-15">January 15, 2025</time>
+        </div>
     </header>
 
     <!-- TLDR -->
@@ -397,32 +383,34 @@ body {
         <p>California allows open carry of most knives but restricts concealed carry of dirks and daggers. Switchblades and automatic knives with blades 2" or longer are illegal. There is no statewide blade length limit, but local cities like Los Angeles and San Francisco may impose stricter rules.</p>
     </div>
 
-    <!-- Quick Answer Grid -->
-    <div class="klh-quick-answer">
-        <h2 class="klh-quick-answer__title">At a Glance</h2>
-        <div class="klh-quick-answer__grid">
-            <div class="klh-qa-item">
-                <span class="klh-qa-item__label">Open carry</span>
+    <hr class="klh-divider">
+
+    <!-- At a Glance -->
+    <div class="klh-glance">
+        <h2 class="klh-section-label">At a Glance</h2>
+        <div class="klh-glance__grid">
+            <div class="klh-glance__item">
+                <span class="klh-glance__label">Open carry</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span>Yes</span>
             </div>
-            <div class="klh-qa-item">
-                <span class="klh-qa-item__label">Concealed carry</span>
+            <div class="klh-glance__item">
+                <span class="klh-glance__label">Concealed carry</span>
                 <span class="klh-badge klh-badge--unclear"><span class="klh-badge__dot"></span>Depends</span>
             </div>
-            <div class="klh-qa-item">
-                <span class="klh-qa-item__label">Blade length</span>
+            <div class="klh-glance__item">
+                <span class="klh-glance__label">Blade length</span>
                 <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span>No limit</span>
             </div>
-            <div class="klh-qa-item">
-                <span class="klh-qa-item__label">Switchblade</span>
+            <div class="klh-glance__item">
+                <span class="klh-glance__label">Switchblade</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span>
             </div>
-            <div class="klh-qa-item">
-                <span class="klh-qa-item__label">Automatic</span>
+            <div class="klh-glance__item">
+                <span class="klh-glance__label">Automatic</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span>
             </div>
-            <div class="klh-qa-item">
-                <span class="klh-qa-item__label">Preemption</span>
+            <div class="klh-glance__item">
+                <span class="klh-glance__label">Preemption</span>
                 <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>None</span>
             </div>
         </div>
@@ -430,7 +418,7 @@ body {
 
     <!-- Key Takeaways -->
     <div class="klh-takeaways">
-        <h2 class="klh-takeaways__title">Key Takeaways</h2>
+        <h2 class="klh-section-label">Key Takeaways</h2>
         <ul>
             <li>No general prohibition on openly carrying knives. Fixed-blade knives must be in a sheath worn openly suspended from the waist (&sect; 20200).</li>
             <li>Concealed carry depends on knife type &mdash; folding knives generally OK, but dirks, daggers, and fixed-blades cannot be concealed (&sect; 21310).</li>
@@ -441,101 +429,94 @@ body {
         </ul>
     </div>
 
-    <!-- Compare CTA -->
-    <div class="klh-state__compare-cta">
+    <!-- Compare -->
+    <div class="klh-compare">
         <a href="#" class="klh-btn klh-btn--outline">Compare California with another state &rarr;</a>
     </div>
 
-    <!-- Accordion Sections -->
-    <div class="klh-state__details">
+    <hr class="klh-divider">
 
-        <!-- Carry -->
-        <details class="klh-accordion" id="carry" open>
-            <summary class="klh-accordion__title">Carry Laws (Open &amp; Concealed)</summary>
-            <div class="klh-accordion__content">
-                <h4>Open Carry <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span>Yes</span></h4>
-                <p>California has no general prohibition on openly carrying knives. Fixed-blade knives must be carried in a sheath worn openly suspended from the waist to avoid being classified as concealed. Folding knives may be carried openly without restriction.</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20200.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 20200</a><span class="klh-statute__dash">&mdash;</span>Openly worn sheath knife not concealed</li>
-                </ul>
+    <!-- Detail Sections -->
 
-                <h4>Concealed Carry <span class="klh-badge klh-badge--unclear"><span class="klh-badge__dot"></span>Depends</span></h4>
-                <p>Concealed carry depends on the type of knife. Folding knives (non-locking and locking) may generally be carried concealed. Dirks, daggers, and fixed-blade knives cannot be concealed. A &ldquo;dirk or dagger&rdquo; is broadly defined as any knife or instrument capable of ready use as a stabbing weapon that may inflict great bodily injury or death.</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21310.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21310</a><span class="klh-statute__dash">&mdash;</span>Carrying concealed dirk or dagger</li>
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=16470.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 16470</a><span class="klh-statute__dash">&mdash;</span>Definition of dirk or dagger</li>
-                </ul>
-            </div>
-        </details>
+    <details class="klh-section" id="carry" open>
+        <summary class="klh-section__title">Carry Laws</summary>
+        <div class="klh-section__body">
+            <h4>Open Carry <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span>Yes</span></h4>
+            <p>California has no general prohibition on openly carrying knives. Fixed-blade knives must be carried in a sheath worn openly suspended from the waist to avoid being classified as concealed. Folding knives may be carried openly without restriction.</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20200.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 20200</a><span class="klh-statute__sep">&mdash;</span>Openly worn sheath knife not concealed</li>
+            </ul>
 
-        <!-- Blade Length -->
-        <details class="klh-accordion" id="blade-length">
-            <summary class="klh-accordion__title">Blade Length &amp; Restrictions</summary>
-            <div class="klh-accordion__content">
-                <p><strong>No statewide blade length limit.</strong></p>
-                <p>California does not impose a statewide blade length limit. However, local ordinances may restrict blade length (e.g., Los Angeles restricts concealed carry of knives with blades over 3 inches).</p>
-            </div>
-        </details>
+            <h4>Concealed Carry <span class="klh-badge klh-badge--unclear"><span class="klh-badge__dot"></span>Depends</span></h4>
+            <p>Concealed carry depends on the type of knife. Folding knives (non-locking and locking) may generally be carried concealed. Dirks, daggers, and fixed-blade knives cannot be concealed. A &ldquo;dirk or dagger&rdquo; is broadly defined as any knife or instrument capable of ready use as a stabbing weapon that may inflict great bodily injury or death.</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21310.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21310</a><span class="klh-statute__sep">&mdash;</span>Carrying concealed dirk or dagger</li>
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=16470.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 16470</a><span class="klh-statute__sep">&mdash;</span>Definition of dirk or dagger</li>
+            </ul>
+        </div>
+    </details>
 
-        <!-- Knife Types -->
-        <details class="klh-accordion" id="knife-types">
-            <summary class="klh-accordion__title">Knife Types (Switchblade, Automatic, etc.)</summary>
-            <div class="klh-accordion__content">
-                <h4>Switchblade <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span></h4>
-                <p>Switchblades with a blade of 2 inches or longer are illegal to carry on the person, possess in the passenger or driver area of a vehicle in a public place, sell, or transfer. Switchblades with a blade shorter than 2 inches are not prohibited under this section.</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21510</a><span class="klh-statute__dash">&mdash;</span>Switchblade knife prohibitions</li>
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17235.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 17235</a><span class="klh-statute__dash">&mdash;</span>Definition of switchblade knife</li>
-                </ul>
+    <details class="klh-section" id="blade-length">
+        <summary class="klh-section__title">Blade Length</summary>
+        <div class="klh-section__body">
+            <p><strong>No statewide blade length limit.</strong></p>
+            <p>California does not impose a statewide blade length limit. However, local ordinances may restrict blade length (e.g., Los Angeles restricts concealed carry of knives with blades over 3 inches).</p>
+        </div>
+    </details>
 
-                <h4>Automatic Knife <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span></h4>
-                <p>Automatic knives fall under the switchblade definition in California. If the blade is 2 inches or longer and opens automatically, it is illegal.</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21510</a><span class="klh-statute__dash">&mdash;</span>Switchblade knife prohibitions</li>
-                </ul>
+    <details class="klh-section" id="knife-types">
+        <summary class="klh-section__title">Knife Types</summary>
+        <div class="klh-section__body">
+            <h4>Switchblade <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span></h4>
+            <p>Switchblades with a blade of 2 inches or longer are illegal to carry on the person, possess in the passenger or driver area of a vehicle in a public place, sell, or transfer. Switchblades with a blade shorter than 2 inches are not prohibited under this section.</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21510</a><span class="klh-statute__sep">&mdash;</span>Switchblade knife prohibitions</li>
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17235.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 17235</a><span class="klh-statute__sep">&mdash;</span>Definition of switchblade knife</li>
+            </ul>
 
-                <h4>Assisted Opening <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span>Legal</span></h4>
-                <p>Assisted-opening knives are not prohibited under California law. The switchblade definition (&sect; 17235) explicitly excludes knives that open with thumb pressure on the blade or a thumb stud, provided the knife has a detent or mechanism that resists opening or biases the blade toward its closed position.</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17235.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 17235</a><span class="klh-statute__dash">&mdash;</span>Definition of switchblade knife (exclusion for assisted-opening)</li>
-                </ul>
+            <h4>Automatic Knife <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span></h4>
+            <p>Automatic knives fall under the switchblade definition in California. If the blade is 2 inches or longer and opens automatically, it is illegal.</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21510</a><span class="klh-statute__sep">&mdash;</span>Switchblade knife prohibitions</li>
+            </ul>
 
-                <h4>Ballistic Knife <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span></h4>
-                <p>Ballistic knives are prohibited under both federal law and California Penal Code.</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21110.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21110</a><span class="klh-statute__dash">&mdash;</span>Ballistic knife prohibitions</li>
-                </ul>
-            </div>
-        </details>
+            <h4>Assisted Opening <span class="klh-badge klh-badge--yes"><span class="klh-badge__dot"></span>Legal</span></h4>
+            <p>Assisted-opening knives are not prohibited under California law. The switchblade definition (&sect; 17235) explicitly excludes knives that open with thumb pressure on the blade or a thumb stud, provided the knife has a detent or mechanism that resists opening or biases the blade toward its closed position.</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17235.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 17235</a><span class="klh-statute__sep">&mdash;</span>Exclusion for assisted-opening knives</li>
+            </ul>
 
-        <!-- Restricted Locations -->
-        <details class="klh-accordion" id="restricted-locations">
-            <summary class="klh-accordion__title">Restricted Locations</summary>
-            <div class="klh-accordion__content">
-                <p><strong>Schools, government buildings, courts, airports, and other locations as defined by statute.</strong></p>
-                <p>It is illegal to bring any knife with a blade longer than 2.5 inches onto K-12 school grounds (&sect; 626.10). Knives with blades over 4 inches are prohibited in state or local public buildings and at required-open public meetings (&sect; 171b).</p>
-                <ul class="klh-statutes">
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=626.10.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 626.10</a><span class="klh-statute__dash">&mdash;</span>Weapons on school grounds</li>
-                    <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=171b.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 171b</a><span class="klh-statute__dash">&mdash;</span>Weapons in state or local public buildings</li>
-                </ul>
-            </div>
-        </details>
+            <h4>Ballistic Knife <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>Illegal</span></h4>
+            <p>Ballistic knives are prohibited under both federal law and California Penal Code.</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21110.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 21110</a><span class="klh-statute__sep">&mdash;</span>Ballistic knife prohibitions</li>
+            </ul>
+        </div>
+    </details>
 
-        <!-- Preemption -->
-        <details class="klh-accordion" id="preemption">
-            <summary class="klh-accordion__title">Preemption &amp; Local Laws</summary>
-            <div class="klh-accordion__content">
-                <h4>Statewide Preemption <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>None</span></h4>
-                <p>California does not have statewide preemption for knife laws. Local municipalities (e.g., Los Angeles, San Francisco) may enact stricter knife ordinances than state law.</p>
-            </div>
-        </details>
+    <details class="klh-section" id="restricted-locations">
+        <summary class="klh-section__title">Restricted Locations</summary>
+        <div class="klh-section__body">
+            <p><strong>Schools, government buildings, courts, airports, and other locations as defined by statute.</strong></p>
+            <p>It is illegal to bring any knife with a blade longer than 2.5 inches onto K-12 school grounds (&sect; 626.10). Knives with blades over 4 inches are prohibited in state or local public buildings and at required-open public meetings (&sect; 171b).</p>
+            <ul class="klh-statutes">
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=626.10.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 626.10</a><span class="klh-statute__sep">&mdash;</span>Weapons on school grounds</li>
+                <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=171b.&lawCode=PEN" target="_blank" rel="noopener noreferrer">Cal. Penal Code &sect; 171b</a><span class="klh-statute__sep">&mdash;</span>Weapons in state or local public buildings</li>
+            </ul>
+        </div>
+    </details>
 
-    </div>
+    <details class="klh-section" id="preemption">
+        <summary class="klh-section__title">Preemption &amp; Local Laws</summary>
+        <div class="klh-section__body">
+            <h4>Statewide Preemption <span class="klh-badge klh-badge--no"><span class="klh-badge__dot"></span>None</span></h4>
+            <p>California does not have statewide preemption for knife laws. Local municipalities (e.g., Los Angeles, San Francisco) may enact stricter knife ordinances than state law.</p>
+        </div>
+    </details>
 
-    <!-- Sources Reviewed -->
-    <details class="klh-accordion" id="sources">
-        <summary class="klh-accordion__title">Sources Reviewed</summary>
-        <div class="klh-accordion__content">
+    <details class="klh-section" id="sources">
+        <summary class="klh-section__title">Sources Reviewed</summary>
+        <div class="klh-section__body">
             <h4>Official Sources (Tier 1)</h4>
             <ul class="klh-statutes">
                 <li class="klh-statute"><a href="https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=PEN" target="_blank" rel="noopener noreferrer">California Legislative Information &mdash; Penal Code</a></li>
@@ -552,8 +533,8 @@ body {
         <p><strong>Disclaimer:</strong> This information is provided for educational purposes only and does not constitute legal advice. Laws change frequently &mdash; the statutes linked above were last verified on 2025-01-15. Always verify current statutes and consult a qualified attorney for legal guidance specific to your situation.</p>
     </div>
 
-    <!-- Back to Hub -->
-    <nav class="klh-state__nav">
+    <!-- Footer Nav -->
+    <nav class="klh-footer-nav">
         <a href="hub.html">&larr; All State Knife Laws</a>
     </nav>
 </div>
