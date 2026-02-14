@@ -13,11 +13,11 @@
   "carry": {
     "open_carry": {
       "legal": true,
-      "details": "Open carry of most knives is generally legal in California. Folding knives of any blade length may be carried openly. Fixed-blade knives must be carried in a sheath worn openly suspended from the waist.",
+      "details": "California has no general prohibition on openly carrying knives. Fixed-blade knives must be carried in a sheath worn openly suspended from the waist to avoid being classified as concealed. Folding knives may be carried openly without restriction.",
       "statutes": [
         {
           "code_section": "Cal. Penal Code \u00a7 20200",
-          "title": "Carrying concealed dirk or dagger prohibited",
+          "title": "Openly worn sheath knife not concealed",
           "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20200.&lawCode=PEN",
           "effective_date": null
         }
@@ -52,7 +52,7 @@
   "knife_types": {
     "switchblade": {
       "legal": false,
-      "details": "Switchblades with a blade of 2 inches or longer are illegal to carry, possess in a vehicle, sell, or otherwise transfer. Switchblades with a blade shorter than 2 inches are legal.",
+      "details": "Switchblades with a blade of 2 inches or longer are illegal to carry on the person, possess in the passenger or driver area of a vehicle in a public place, sell, or transfer. Switchblades with a blade shorter than 2 inches are not prohibited under this section.",
       "statutes": [
         {
           "code_section": "Cal. Penal Code \u00a7 21510",
@@ -82,8 +82,15 @@
     },
     "assisted_opening": {
       "legal": true,
-      "details": "Assisted-opening knives are generally legal in California. They are distinguished from switchblades because the user must apply manual force to begin opening the blade.",
-      "statutes": []
+      "details": "Assisted-opening knives are not prohibited under California law. The switchblade definition (§ 17235) explicitly excludes knives that open with thumb pressure on the blade or a thumb stud, provided the knife has a detent or mechanism that resists opening or biases the blade toward its closed position.",
+      "statutes": [
+        {
+          "code_section": "Cal. Penal Code \u00a7 17235",
+          "title": "Definition of switchblade knife (exclusion for assisted-opening)",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17235.&lawCode=PEN",
+          "effective_date": null
+        }
+      ]
     },
     "ballistic_knife": {
       "legal": false,
@@ -101,7 +108,7 @@
 
   "restricted_locations": {
     "summary": "Schools (K-12 and colleges), government buildings, courts, airports, and other locations as defined by statute.",
-    "details": "It is illegal to bring any knife with a blade longer than 2.5 inches onto K-12 school grounds. Possession of weapons on state or local public buildings and at public meetings is also restricted.",
+    "details": "It is illegal to bring any knife with a blade longer than 2.5 inches onto K-12 school grounds (§ 626.10). Knives with blades over 4 inches are prohibited in state or local public buildings and at required-open public meetings (§ 171b).",
     "statutes": [
       {
         "code_section": "Cal. Penal Code \u00a7 626.10",
@@ -127,8 +134,8 @@
     ],
     "secondary_mirrors": [
       {
-        "title": "Justia — California Penal Code",
-        "url": "https://law.justia.com/codes/california/penal-code/"
+        "title": "Justia — Cal. Penal Code § 21510 (Switchblade Knife)",
+        "url": "https://law.justia.com/codes/california/code-pen/part-6/title-3/division-5/chapter-5/section-21510/"
       }
     ]
   }
